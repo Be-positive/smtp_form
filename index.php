@@ -18,8 +18,8 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $mail->isSMTP();
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = "true";
-    $mail->Username = "felps0308@gmail.com";
-    $mail->Password = "volod1999";
+    $mail->Username = "your_email@gmail.com";
+    $mail->Password = "your_email_password";
     $mail->Port = "587"; //or 465
     $mail->SMTPSecure = "tls";
     $mail->Subject = "Test Email Using PHPMailer";
@@ -27,7 +27,7 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     //connect with HTML
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("felps0308@gmail.com");
+    $mail->addAddress("your_email@gmail.com");
     $mail->Subject = ("$email ($name)");
     $mail->Body = ("Город: $city" . "<br>" . "Услуга: $services" . "<br>" . "Номер телефона: $telephone" . "<br>" . "IP Address: $ip" . "<br>" . "Комментарий: $body" );
 
